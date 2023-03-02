@@ -167,7 +167,7 @@ if page == "Application":
 
     st.subheader('1. Data loading 🏋️')
     st.write("Import a time series csv file.")
-    with st.beta_expander("Data format"): 
+    with st.expander("Data format"): 
         st.write("The dataset can contain multiple columns but you will need to select a column to be used as dates and a second column containing the metric you wish to forecast. The columns will be renamed as **ds** and **y** to be compliant with Prophet. Even though we are using the default Pandas date parser, the ds (datestamp) column should be of a format expected by Pandas, ideally YYYY-MM-DD for a date or YYYY-MM-DD HH:MM:SS for a timestamp. The y column must be numeric.")
 
     input = st.file_uploader('')
@@ -226,22 +226,22 @@ if page == "Application":
     with st.beta_container():
         st.write('In this section you can modify the algorithm settings.')
             
-        with st.beta_expander("Horizon"):
+        with st.expander("Horizon"):
             periods_input = st.number_input('Select how many future periods (days) to forecast.',
             min_value = 1, max_value = 366,value=90)
 
-        with st.beta_expander("Seasonality"):
+        with st.expander("Seasonality"):
             st.markdown("""The default seasonality used is additive, but the best choice depends on the specific case, therefore specific domain knowledge is required. For more informations visit the [documentation](https://facebook.github.io/prophet/docs/multiplicative_seasonality.html)""")
             seasonality = st.radio(label='Seasonality',options=['additive','multiplicative'])
 
-        with st.beta_expander("Trend components"):
+        with st.expander("Trend components"):
             st.write("Add or remove components:")
             daily = st.checkbox("Daily")
             weekly= st.checkbox("Weekly")
             monthly = st.checkbox("Monthly")
             yearly = st.checkbox("Yearly")
 
-        with st.beta_expander("Growth model"):
+        with st.expander("Growth model"):
             st.write('Prophet uses by default a linear growth model.')
             st.markdown("""For more information check the [documentation](https://facebook.github.io/prophet/docs/saturating_forecasts.html#forecasting-growth)""")
 
@@ -277,7 +277,7 @@ if page == "Application":
                     df['floor']=floor
             
             
-        with st.beta_expander('Holidays'):
+        with st.expander('Holidays'):
             
             countries = ['Country name','Italy','Spain','United States','France','Germany','Ukraine']
             
@@ -319,7 +319,7 @@ if page == "Application":
                             
                 holidays = st.checkbox('Add country holidays to the model')
 
-        with st.beta_expander('Hyperparameters'):
+        with st.expander('Hyperparameters'):
             st.write('In this section it is possible to tune the scaling coefficients.')
             
             seasonality_scale_values= [0.1, 1.0,5.0,10.0]    
@@ -404,7 +404,7 @@ if page == "Application":
             st.write("Cutoff (period): a forecast is made for every observed point between cutoff and cutoff + horizon.""")
 
             
-        with st.beta_expander("Cross validation"):    
+        with st.expander("Cross validation"):    
             initial = st.number_input(value= 365,label="initial",min_value=30,max_value=1096)
             initial = str(initial) + " days"
 
