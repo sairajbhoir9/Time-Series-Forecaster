@@ -5,4 +5,4 @@ fbprophet
 plotly
 altair
 streamlit==0.77.0
-numpy
+numpy==1.19.2
