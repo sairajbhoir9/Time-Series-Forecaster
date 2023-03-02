@@ -1,5 +1,5 @@
 pystan==3.6.0
-fbprophet
+
 prophet==1.1.2
 protobuf~=3.12
 matplotlib==3.5.2
