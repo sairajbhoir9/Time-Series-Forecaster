@@ -4,5 +4,5 @@ holidays
 fbprophet
 plotly
 altair
-streamlit
+streamlit==0.77.0
 numpy
