@@ -3,12 +3,12 @@ from streamlit import caching
 import pandas as pd
 import numpy as np
 
-import pystan
-from fbprophet import Prophet
-from fbprophet.plot import add_changepoints_to_plot
-from fbprophet.diagnostics import cross_validation
-from fbprophet.diagnostics import performance_metrics
-from fbprophet.plot import plot_cross_validation_metric
+import stan
+from prophet import Prophet
+from prophet.plot import add_changepoints_to_plot
+from prophet.diagnostics import cross_validation
+from prophet.diagnostics import performance_metrics
+from prophet.plot import plot_cross_validation_metric
 import json
 from fbprophet.serialize import model_to_json, model_from_json
 import holidays
