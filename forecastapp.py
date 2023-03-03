@@ -397,7 +397,7 @@ if page == "Application":
 
         st.subheader('4. Model validation 🧪')
         st.write("In this section it is possible to do cross-validation of the model.")
-        with st.beta_expander("Explanation"):
+        with st.expander("Explanation"):
             st.markdown("""The Prophet library makes it possible to divide our historical data into training data and testing data for cross validation. The main concepts for cross validation with Prophet are:""")
             st.write("Training data (initial): The amount of data set aside for training. The parameter is in the API called initial.")
             st.write("Horizon: The data set aside for validation.")
