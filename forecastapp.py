@@ -161,7 +161,7 @@ if page == "Application":
     st.title('Time Series Forecasting Application 馃馃徎')
     st.write('This app enables you to generate time series forecast withouth any dependencies.')
     st.markdown("""The forecasting library used is **[Prophet](https://facebook.github.io/prophet/)**.""")
-    caching.clear_cache()
+    
     df =  pd.DataFrame()   
 
     st.subheader('1. Data loading 馃弸锔�')
