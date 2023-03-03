@@ -148,7 +148,7 @@ if page == "Application":
             caching.clear_cache()
             
 
-        with st.beta_expander("Code snippets"):
+        with st.expander("Code snippets"):
             snippet = st.radio('Code snippets',options=code_options)    
             if snippet == code_options[0]:
                 st.code(code1)
@@ -190,7 +190,7 @@ if page == "Application":
                 st.write(list(df.columns))
                 columns = list(df.columns)
         
-                col1,col2 = st.beta_columns(2)
+                col1,col2 = st.columns(2)
                 with col1:
                     date_col = st.selectbox("Select date column",index= 0,options=columns,key="date")
                 with col2:
@@ -202,7 +202,7 @@ if page == "Application":
 
         if st.checkbox('Chart data',key='show'):
             with st.spinner('Plotting data..'):
-                col1,col2 = st.beta_columns(2)
+                col1,col2 = st.columns(2)
                 with col1:
                     st.dataframe(df)
                     
