@@ -167,7 +167,7 @@ if page == "Application":
 
     st.subheader('1. Data loading 🏋️')
     st.write("Import a time series csv file.")
-    with st.beta_expander("Data format"): 
+    with st.expander("Data format"): 
         st.write("The dataset can contain multiple columns but you will need to select a column to be used as dates and a second column containing the metric you wish to forecast. The columns will be renamed as **ds** and **y** to be compliant with Prophet. Even though we are using the default Pandas date parser, the ds (datestamp) column should be of a format expected by Pandas, ideally YYYY-MM-DD for a date or YYYY-MM-DD HH:MM:SS for a timestamp. The y column must be numeric.")
 
     input = st.file_uploader('')
@@ -281,8 +281,8 @@ if page == "Application":
             
             countries = ['Country name','Italy','Spain','United States','France','Germany','Ukraine']
             
-            with st.beta_container():
-                years=[2021]
+            with st.container():
+                years=[2023]
                 selected_country = st.selectbox(label="Select country",options=countries)
 
                 if selected_country == 'Italy':
@@ -404,7 +404,7 @@ if page == "Application":
             st.write("Cutoff (period): a forecast is made for every observed point between cutoff and cutoff + horizon.""")
 
             
-        with st.beta_expander("Cross validation"):    
+        with st.expander("Cross validation"):    
             initial = st.number_input(value= 365,label="initial",min_value=30,max_value=1096)
             initial = str(initial) + " days"
 
@@ -523,7 +523,7 @@ if page == "Application":
         
         if input:
             if output == 1:
-                col1, col2, col3, col4 = st.beta_columns(4)
+                col1, col2, col3, col4 = st.columns(4)
 
                 with col1:
                     
