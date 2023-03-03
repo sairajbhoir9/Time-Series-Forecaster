@@ -10,7 +10,7 @@ from prophet.diagnostics import cross_validation
 from prophet.diagnostics import performance_metrics
 from prophet.plot import plot_cross_validation_metric
 import json
-from fbprophet.serialize import model_to_json, model_from_json
+from prophet.serialize import model_to_json, model_from_json
 import holidays
 
 import altair as alt
