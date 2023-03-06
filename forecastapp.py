@@ -535,7 +535,7 @@ if page == "Application":
                             st.write(export_forecast.head())
                             export_forecast= export_forecast.to_csv(decimal=',')
                             b64 = base64.b64encode(export_forecast.encode()).decode()
-                            href = f'<a href="data:file/csv;base64,{b64}">Download CSV File</a> (click derecho > guardar como **forecast.csv**)'
+                            href = f'<a href="data:text/csv;base64,{b64}">Download CSV File</a> (click derecho > guardar como **forecast.csv**)'
                             st.markdown(href, unsafe_allow_html=True)
             
                 with col2:
@@ -544,7 +544,7 @@ if page == "Application":
                         try:
                             df_p = df_p.to_csv(decimal=',')
                             b64 = base64.b64encode(df_p.encode()).decode()
-                            href = f'<a href="data:file/csv;base64,{b64}">Download CSV File</a> (click derecho > guardar como **metrics.csv**)'
+                            href = f'<a href="data:text/csv;base64,{b64}">Download CSV File</a> (click derecho > guardar como **metrics.csv**)'
                             st.markdown(href, unsafe_allow_html=True)
                         except:
                             st.write("No metrics to export")
