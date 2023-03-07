@@ -597,3 +597,9 @@ style="font-size:24px;color: #e4e0e0"></i></a>
 </div>
 
 """, unsafe_allow_html=True)
+    github_icon = '<i class="fab fa-github"></i>'
+
+# Create a button with the GitHub icon and "Click me" text
+if st.button(f"{github_icon} Click me"):
+    # Redirect to Google on button click
+    st.markdown("[Google](https://github.com/sairajbhoir9)")
