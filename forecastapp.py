@@ -25,7 +25,7 @@ import itertools
 from datetime import datetime
 import json
 
-st.set_page_config(page_title ="Forecast App",
+st.set_page_config(page_title ="Time-Series Forecasting App",
                     initial_sidebar_state="collapsed",
                     page_icon="🔮")
 
@@ -161,7 +161,7 @@ if page == "Application":
             if snippet == code_options[3]:
                 st.code(code4)
 
-    st.title('Forecast application 🧙🏻')
+    st.title('Time-Series Forecaster 🧙🏻')
     st.write('This app enables you to generate time series forecast withouth any dependencies.')
     st.markdown("""The forecasting library used is **[Prophet](https://facebook.github.io/prophet/)**.""")
     
@@ -574,7 +574,7 @@ if page == "About":
     st.write("")
     st.write("Author:")
     st.markdown(""" **[Sairaj Prakash Bhoir](https://www.linkedin.com/in/sairajbhoir)**""")
-    st.markdown("""**[Source code](https://github.com/giandata/forecast-app)**""")
+    st.markdown("""**[Source code](https://github.com/sairajbhoir9/Time-Series-Forecaster)**""")
 
     
 
