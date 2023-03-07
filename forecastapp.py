@@ -571,8 +571,23 @@ if page == "About":
     st.markdown("Official documentation of **[Streamlit](https://docs.streamlit.io/en/stable/getting_started.html)**")
     st.write("")
     st.write("Author:")
-    st.markdown(""" **[Giancarlo Di Donato](https://www.linkedin.com/in/giancarlodidonato/)**""")
+    st.markdown(""" **[Sairaj Prakash Bhoir](https://www.linkedin.com/in/sairajbhoir)**""")
     st.markdown("""**[Source code](https://github.com/giandata/forecast-app)**""")
 
-    st.write("Created on 27/02/2021")
-    st.write("Last updated: **29/04/2021**")
+    social_icons = """
+
+<div class="social" style="margin-bottom: 8px">
+
+    <a class="social-icons" href="https://github.com/sairajbhoir9" target="_blank"><i class="fa fa-github-alt" style="font-size:24px;color: #e4e0e0"></i></a>
+
+    <a class="social-icons" href="https://www.linkedin.com/in/sairajbhoir" target="_blank"><i class="fa fa-linkedin-square" style="font-size:24px;color: #e4e0e0"></i></a>
+
+    <a class="social-icons" href="https://instagram.com/bhoir_3121" target="_blank"><i class="fa fa-instagram" style="font-size:24px;color: #e4e0e0"></i></a>
+
+    <a class="social-icons" href="https://twitter.com/SairajBhoir9" target="_blank"><i class="fa fa-twitter" style="font-size:24px;color: #e4e0e0"></i></a>
+
+</div>
+
+"""
+
+st.markdown(social_icons, unsafe_allow_html=True)
