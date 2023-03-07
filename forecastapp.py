@@ -2,6 +2,8 @@ import streamlit as st
 from streamlit import caching
 import pandas as pd
 import numpy as np
+import streamlit.components.v1 as components
+
 
 import stan
 from prophet import Prophet
@@ -574,32 +576,53 @@ if page == "About":
     st.markdown(""" **[Sairaj Prakash Bhoir](https://www.linkedin.com/in/sairajbhoir)**""")
     st.markdown("""**[Source code](https://github.com/giandata/forecast-app)**""")
 
-    st.write("""
+    components.html(
 
-<div class="social" style="margin-bottom: 8px">
+    """
 
-<a class="social-icons" href="https://github.com/sairajbhoir9" target="_blank"><i class="fa fa-github-alt" 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-SxZ+zaxKXQzLdD3FqVcKfvnKsTt8l1t+cA+/1Iz7pblfvGZfzCZNvLewgK09QAtFfOyOAG8DWvDxEeO/7X/okA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-style="font-size:24px;color: #e4e0e0"></i></a>
+    """,
 
-<a class="social-icons" href="https://www.linkedin.com/in/sairajbhoir" target="_blank"><i class="fa fa-
+    height=0,
 
-linkedin-square" style="font-size:24px;color: #e4e0e0"></i></a>
+       )
+    # Define the HTML and CSS code for the social media icons
 
-<a class="social-icons" href="https://instagram.com/bhoir_3121" target="_blank"><i class="fa fa-instagram" 
+    icon_style = """
 
-style="font-size:24px;color: #e4e0e0"></i></a>
+    style='display:inline-block;padding:8px;border-radius:50%;background-color:#e4e0e0;'
 
-<a class="social-icons" href="https://twitter.com/SairajBhoir9" target="_blank"><i class="fa fa-twitter" 
+"""
 
-style="font-size:24px;color: #e4e0e0"></i></a>
+    icons_html = f"""
 
-</div>
+    <a href='https://www.instagram.com/' target='_blank' {icon_style}>
 
-""", unsafe_allow_html=True)
-    github_icon = '<i class="fab fa-github"></i>'
+        <i class='fab fa-instagram' style='color:#000000;font-size:24px;'></i>
 
-# Create a button with the GitHub icon and "Click me" text
-if st.button(f"{github_icon} Click me"):
-    # Redirect to Google on button click
-    st.markdown("[Google](https://github.com/sairajbhoir9)")
+    </a>
+
+    <a href='https://www.linkedin.com/' target='_blank' {icon_style}>
+
+        <i class='fab fa-linkedin' style='color:#000000;font-size:24px;'></i>
+
+    </a>
+
+    <a href='https://github.com/' target='_blank' {icon_style}>
+
+        <i class='fab fa-github' style='color:#000000;font-size:24px;'></i>
+
+    </a>
+
+    <a href='https://twitter.com/' target='_blank' {icon_style}>
+
+        <i class='fab fa-twitter' style='color:#000000;font-size:24px;'></i>
+
+    </a>
+
+"""
+
+# Add the HTML code to the Streamlit app
+
+    st.markdown(icons_html, unsafe_allow_html=True)
