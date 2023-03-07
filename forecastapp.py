@@ -576,53 +576,6 @@ if page == "About":
     st.markdown(""" **[Sairaj Prakash Bhoir](https://www.linkedin.com/in/sairajbhoir)**""")
     st.markdown("""**[Source code](https://github.com/giandata/forecast-app)**""")
 
-    components.html(
+    
 
-    """
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-SxZ+zaxKXQzLdD3FqVcKfvnKsTt8l1t+cA+/1Iz7pblfvGZfzCZNvLewgK09QAtFfOyOAG8DWvDxEeO/7X/okA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    """,
-
-    height=0,
-
-       )
-    # Define the HTML and CSS code for the social media icons
-
-    icon_style = """
-
-    style='display:inline-block;padding:8px;border-radius:50%;background-color:#e4e0e0;'
-
-"""
-
-    icons_html = f"""
-
-    <a href='https://www.instagram.com/' target='_blank' {icon_style}>
-
-        <i class='fab fa-instagram' style='color:#000000;font-size:24px;'></i>
-
-    </a>
-
-    <a href='https://www.linkedin.com/' target='_blank' {icon_style}>
-
-        <i class='fab fa-linkedin' style='color:#000000;font-size:24px;'></i>
-
-    </a>
-
-    <a href='https://github.com/' target='_blank' {icon_style}>
-
-        <i class='fab fa-github' style='color:#000000;font-size:24px;'></i>
-
-    </a>
-
-    <a href='https://twitter.com/' target='_blank' {icon_style}>
-
-        <i class='fab fa-twitter' style='color:#000000;font-size:24px;'></i>
-
-    </a>
-
-"""
-
-# Add the HTML code to the Streamlit app
-
-    st.markdown(icons_html, unsafe_allow_html=True)
